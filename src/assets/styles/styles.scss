@@ -1,0 +1,183 @@
+@font-face {
+    font-family: "Glacial Indifference";
+    src: url("../fonts/GlacialIndifference-Regular.otf");
+  }
+  
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body, body * {
+    font-family: 'Glacial Indifference', sans-serif;
+}
+
+body {
+    background-image: url("../images/background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    height: 100dvh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    height: 3rem;
+    margin: 0.8rem;
+    padding: 0.8rem;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    font-size: 2rem;
+}
+
+button {
+    height: 4rem;
+    width: 20rem;
+    margin: 0.8rem;
+    padding: 0.8rem;
+    font-size: 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 2.4rem;
+    font-weight: lighter;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+.App {
+    height: 100%;
+    width: 100%;
+}
+
+.app-title {
+    padding: 1rem;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 6px 6px 0 0;
+}
+
+.authentication-panel, .tickets-panel {
+    color: #fff;
+    min-width: 35rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 3rem;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 6px 6px;
+    overflow: hidden;
+    opacity: 1;
+    transition: ease-in-out 0.6s;
+
+    h1 {
+        margin: 1rem;
+    }
+}
+
+.authentication-panel {
+    min-width: auto;
+    padding: 1rem 2rem;
+}
+
+.tickets-panel {
+    min-height: 25rem;
+}
+
+.expire-panel {
+    display: flex;
+}
+
+.check-pass-btn {
+    margin-left: 23rem;
+    width: 5rem;
+    background-color: transparent;
+    color: #fff;
+}
+
+.back-btn, .forward-btn {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.5rem;
+    background-color: transparent;
+    color: #fff;
+}
+
+.search-panel,.entries-panel,.password-input {
+    display: flex;
+    background: #fff;
+    border-radius: 4px;
+    margin: 1rem;
+    margin-top: 0;
+
+    button {
+        color: #000;
+    }
+}
+
+.password-input {
+    input {
+        height: 4rem;
+        width: 20rem;
+    }
+    button {
+        width: 4rem;
+    }
+}
+
+.search-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.serch-input,.entries-input{
+    width: 21rem;
+}
+
+.tickets-panel {
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.create-ticket-panel,.check-ticket-panel {
+    transition: ease-in-out 0.5s;
+}
+
+.line {
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.hidden {
+    opacity: 0;
+    position: absolute;
+    z-index: -10;
+    transition: ease-in-out 0.5s;
+}
