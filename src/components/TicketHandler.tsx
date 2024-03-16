@@ -144,6 +144,39 @@ const TicketHandler = ({authentication}: props) => {
 
   return (
     <div className={ !authentication ? "tickets-panel" : "hidden" }>
+        <div className="create-ticket-panel">
+            {
+                !ticketCreatedPanel && 
+                <div>
+                    <h1>Generate New Ticket</h1>
+                    <span className="entries-panel">
+                        <input type="text" placeholder="Number Of Entries" value={ticketEntries} className="entries-input"
+                            inputMode="numeric" onChange={(e) => {setTicketEntries(e.target.value)}}/>
+      	                <button className="forward-btn create-ticket-btn" onClick={generateTicketId}>
+                            <span className="material-symbols-outlined">
+                                east
+                            </span>
+                        </button>
+                    </span>
+                </div>
+            }
+            {
+                ticketCreatedPanel && 
+                <div>
+                    <span className="expire-panel">
+                        <button onClick={closePanel} className="back-btn">
+                            <span className="material-symbols-outlined">
+                                west
+                            </span>
+                        </button>
+                        <h1>Ticket Info</h1>
+                    </span>
+                    <h1>Ticket Id : { ticketId }</h1>
+                    <h1>Entries : { ticketEntries }</h1>
+                </div>
+            }
+        </div>
+        <hr className="line"/>
         <div className="check-ticket-panel">
             { !serchedTicketPanel && !error404 &&
                 <div>
@@ -210,39 +243,6 @@ const TicketHandler = ({authentication}: props) => {
                         <h1> Invalid Ticket Id </h1>
                     </span>
                     <h1>Ticket Id : { serchTicketId }</h1>
-                </div>
-            }
-        </div>
-        <hr className="line"/>
-        <div className="create-ticket-panel">
-            {
-                !ticketCreatedPanel && 
-                <div>
-                    <h1>Generate New Ticket</h1>
-                    <span className="entries-panel">
-                        <input type="text" placeholder="Number Of Entries" value={ticketEntries} className="entries-input"
-                            inputMode="numeric" onChange={(e) => {setTicketEntries(e.target.value)}}/>
-      	                <button className="forward-btn create-ticket-btn" onClick={generateTicketId}>
-                            <span className="material-symbols-outlined">
-                                east
-                            </span>
-                        </button>
-                    </span>
-                </div>
-            }
-            {
-                ticketCreatedPanel && 
-                <div>
-                    <span className="expire-panel">
-                        <button onClick={closePanel} className="back-btn">
-                            <span className="material-symbols-outlined">
-                                west
-                            </span>
-                        </button>
-                        <h1>Ticket Info</h1>
-                    </span>
-                    <h1>Ticket Id : { ticketId }</h1>
-                    <h1>Entries : { ticketEntries }</h1>
                 </div>
             }
         </div>
