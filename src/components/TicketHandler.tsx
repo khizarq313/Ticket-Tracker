@@ -107,7 +107,6 @@ const TicketHandler = ({authentication}: props) => {
                 setCurrentTicketInfo(ticketInfo);
                 setSerchedTicketPanel(true);
             } else {
-                console.log("Ticket Not Found");
                 setError404(true);
             }     
         }
