@@ -19,7 +19,7 @@ body, body * {
 
 body {
     background-image: url("../images/background.png");
-    background-position: center;
+    background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
     color: black;
@@ -90,7 +90,7 @@ h2 {
     border-radius: 0 0 6px 6px;
     overflow: hidden;
     opacity: 1;
-    transition: ease-in-out 0.6s;
+    transition: ease-in-out 0.3s;
 
     h1 {
         margin: 1rem;
@@ -181,3 +181,9 @@ h2 {
     z-index: -10;
     transition: ease-in-out 0.5s;
 }
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 55%;
+    }
+  }

@@ -1,5 +1,6 @@
 {
   "name": "tickets-tracker",
+  "homepage": "http://khizarq313.github.io/ticket-tracker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
